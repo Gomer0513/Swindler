@@ -138,7 +138,7 @@ class OSXSystemScreenDelegate: SystemScreenDelegate {
     var screens_: [ScreenDelegate]
     var delegates: [Delegate]
 
-    private var handler: Optional<(ScreenLayoutChangedEvent) -> Void>
+    private var handler: ((ScreenLayoutChangedEvent) -> Void)?
 
     init() {
         lock_ = NSLock()
